@@ -78,7 +78,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contributing
 
-Feel free to 
+Feel free to
 
 ## TODO
 
@@ -97,22 +97,22 @@ Feel free to
   - [ ] Moving a book to a different shelf works correctly.
 - [ ] When the browser is refreshed, the same information is displayed on the page.
 **Search Page**
-- [ ] Page has a search input field.
-- [ ] Page behaves correctly.
-- [ ] *User types into the search field:*
-    - [ ] Books that match the query are displayed on the page.
-      - [ ] With their titles and author(s). (*can use throttle/debounce*)
-- [ ] Results not shown when all text in input is deleted.
-- [ ] Invalid queries are handled and prior search results are not shown.
-- [ ] The search works correctly when a book does not have a thumbnail or an author. (*To test this, try searching for "poetry" and "biography*")
-- [ ] The user is able to search for multiple words, such as “artificial intelligence.”
-- [ ] Results allow the user to select “currently reading”, “want to read”, or “read” to place the book in a certain shelf.
-- [ ] *Ifbook is assigned to a shelf on the main page and that book appears on the search page:*
-  - [ ] The correct shelf should be selected on the search page.
-  - [ ] *If that book's shelf is changed on the search page:*
-    - [ ] That change should be reflected on the main page as well.
-    - [ ] The option "None" should be selected if a book has not been assigned to a shelf.
-- [ ] When item is categorized on search page and user navigates to the main page, it appears on that shelf in the main page.
+- [x] Page has a search input field.
+- [x] Page behaves correctly.
+- [x] *User types into the search field:*
+    - [x] Books that match the query are displayed on the page.
+      - [x] With their titles and author(s). (*can use throttle/debounce*)
+- [x] Results not shown when all text in input is deleted.
+- [x] Invalid queries are handled and prior search results are not shown.
+- [x] The search works correctly when a book does not have a thumbnail or an author. (*To test this, try searching for "poetry" and "biography*")
+- [x] The user is able to search for multiple words, such as “artificial intelligence.”
+- [x] Results allow the user to select “currently reading”, “want to read”, or “read” to place the book in a certain shelf.
+- [x] *If book is assigned to a shelf on the main page and that book appears on the search page:*
+  - [x] The correct shelf should be selected on the search page.
+  - [x] *If that book's shelf is changed on the search page:*
+    - [x] That change should be reflected on the main page as well.
+    - [x] The option "None" should be selected if a book has not been assigned to a shelf.
+- [x] When item is categorized on search page and user navigates to the main page, it appears on that shelf in the main page.
 **Routing**
 - [ ] Main page contains link to search page.
   - [ ] When link is clicked, search page is displayed  /search.
@@ -123,6 +123,6 @@ Feel free to
 - [ ] Tate variable is not modified directly - setState() function is used correctly.
 - [ ] Books have same state on search page and main page.
 [ ] If book is on bookshelf, that is reflected in both locations.
-[ ] The code runs without errors. 
-[ ] There are no warnings from not following best practices listed in documentation (*such as using key for list items*) 
+[ ] The code runs without errors.
+[ ] There are no warnings from not following best practices listed in documentation (*such as using key for list items*)
 [ ] All code is functional and formatted properly.
