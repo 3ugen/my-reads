@@ -114,9 +114,9 @@ Feel free to
     - [x] The option "None" should be selected if a book has not been assigned to a shelf.
 - [x] When item is categorized on search page and user navigates to the main page, it appears on that shelf in the main page.
 **Routing**
-- [ ] Main page contains link to search page.
-  - [ ] When link is clicked, search page is displayed  /search.
-- [ ] Search page contains link to main page.
+- [x] Main page contains link to search page.
+  - [x] When link is clicked, search page is displayed  /search.
+- [x] Search page contains link to main page.
   - [ ] When link is clicked, main page is displayed and browser’s URL is /.
 **Code Functionality**
 - [ ] Component state is passed down from parent components to child components.
