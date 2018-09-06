@@ -14,8 +14,14 @@ class SearchBook extends Component {
   }
 
   updateSearchResults = (q) => {
-    if (this.state.query) {
-      BooksAPI.search(q).then(results => this.setState({searchResults: results}))
+    if (q) {
+      BooksAPI.search(q).then(results => {
+        if (results.error) {
+          this.setState({searchResults: []})
+        } else {
+          this.setState({searchResults: results})
+        }
+      })
     } else {
       this.setState({ searchResults: []})
     }
