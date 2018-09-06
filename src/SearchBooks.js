@@ -16,12 +16,11 @@ class SearchBook extends Component {
   updateSearchResults = (q) => {
     if (q) {
       BooksAPI.search(q).then(results => {
-        if (results.error) {
-          this.setState({searchResults: []})
-        } else {
+        results.error ?
+          this.setState({searchResults: []}) :
           this.setState({searchResults: results})
         }
-      })
+      )
     } else {
       this.setState({ searchResults: []})
     }
