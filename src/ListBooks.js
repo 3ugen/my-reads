@@ -16,7 +16,7 @@ class ListBooks extends React.Component {
                     <ol className="books-grid">
                       {
                         this.props.books
-                          .filter(book => book.shelf === "Currently Reading")
+                          .filter(book => book.shelf === "currentlyReading")
                           .map(book => (
                             <li key={book.id}>
                               <Book 
@@ -34,7 +34,7 @@ class ListBooks extends React.Component {
                     <ol className="books-grid">
                       {
                         this.props.books
-                          .filter(book => book.shelf === "Want to Read")
+                          .filter(book => book.shelf === "wantToRead")
                           .map(book => (
                             <li key={book.id}>
                               <Book 
@@ -52,7 +52,7 @@ class ListBooks extends React.Component {
                     <ol className="books-grid">
                       {
                         this.props.books
-                          .filter(book => book.shelf === "Read")
+                          .filter(book => book.shelf === "read")
                           .map(book => (
                             <li key={book.id}>
                               <Book 
