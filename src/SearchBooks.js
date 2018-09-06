@@ -6,9 +6,7 @@ class SearchBook extends Component {
   }
 
   updateQuery = (query) => {
-    this.setStat({
-      query: query.trim()
-    })
+    this.setState({query: query})
   }
 
   render() {
