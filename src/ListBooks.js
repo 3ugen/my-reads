@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Book from './Book'
 class ListBooks extends React.Component {
     render() {
+      console.log(this.props.books)
         return(
           <div className="list-books">
             <div className="list-books-title">
@@ -18,7 +19,9 @@ class ListBooks extends React.Component {
                           .filter(book => book.shelf === "Currently Reading")
                           .map(book => (
                             <li key={book.id}>
-                              <Book />
+                              <Book 
+                                book={book}
+                              />
                             </li>
                           ))
                       }
@@ -34,7 +37,9 @@ class ListBooks extends React.Component {
                           .filter(book => book.shelf === "Want to Read")
                           .map(book => (
                             <li key={book.id}>
-                              <Book />
+                              <Book 
+                                book={book}
+                              />
                             </li>
                           ))
                       }
@@ -50,7 +55,9 @@ class ListBooks extends React.Component {
                           .filter(book => book.shelf === "Read")
                           .map(book => (
                             <li key={book.id}>
-                              <Book />
+                              <Book 
+                                book={book}
+                              />
                             </li>
                           ))
                       }
