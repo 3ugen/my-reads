@@ -18,7 +18,7 @@ class BooksApp extends React.Component {
   }
 
   changeShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(data => console.log(data))
+    BooksAPI.update(book, shelf).then(() => this.setState())
   }
 
   toggleSearchPage = () => {
@@ -43,6 +43,7 @@ class BooksApp extends React.Component {
               <SearchBook
                 closeSearchPage={this.toggleSearchPage}
                 changeShelf={this.changeShelf}
+                books={this.state.books}
               />
             )}/>
       </div>
