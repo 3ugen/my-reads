@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Book from './Book'
-class ListBooks extends React.Component {
+class ListBooks extends Component {
     render() {
       console.log(this.props.books)
         return(
