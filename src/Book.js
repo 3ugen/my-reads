@@ -11,7 +11,7 @@ export class Book extends Component {
               onChange={(e) => this.props.changeShelf(
               this.props.book, e.target.value
             )}
-              value ={this.props.shelfIs}
+              value ={this.props.book.shelf}
             >
 
               <option value="move" disabled>Move to...</option>
