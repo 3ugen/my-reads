@@ -8,7 +8,8 @@ import './App.css'
 
 class BooksApp extends React.Component {
   state = {
-    books: []
+    books: [],
+    showSearchPage: false
   }
 
   componentDidMount() {
@@ -19,15 +20,19 @@ class BooksApp extends React.Component {
     BooksAPI.update(book, shelf).then(data => console.log(data))
   }
 
+  showSearchPage = () => this.setState({ showSearchPage: true })
+
   render() {
+    console.log(this.state);
     return (
       <div className="app">
         {this.state.showSearchPage ? (
-         <SearchBook /> 
+         <SearchBook />
         ) : (
-         <ListBooks 
+         <ListBooks
            books={this.state.books}
            changeShelf={this.changeShelf}
+           showSearchPage={this.showSearchPage}
          />
         )}
       </div>
