@@ -70,7 +70,7 @@ class ListBooks extends Component {
               </div>
             </div>
             <div className="open-search">
-              <a onClick={this.props.showSearchPage}>Add a book</a>
+              <a onClick={this.props.openSearchPage}>Add a book</a>
             </div>
           </div>
         )

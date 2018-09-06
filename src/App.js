@@ -9,7 +9,7 @@ import './App.css'
 class BooksApp extends React.Component {
   state = {
     books: [],
-    showSearchPage: false
+    SearchPage: false
   }
 
   componentDidMount() {
@@ -20,19 +20,26 @@ class BooksApp extends React.Component {
     BooksAPI.update(book, shelf).then(data => console.log(data))
   }
 
-  showSearchPage = () => this.setState({ showSearchPage: true })
+  toggleSearchPage = () => {
+    this.state.SearchPage ?
+    (this.setState({ SearchPage: false })) :
+    (this.setState({ SearchPage: true }))
+  }
+
 
   render() {
     console.log(this.state);
     return (
       <div className="app">
-        {this.state.showSearchPage ? (
-         <SearchBook />
+        {this.state.SearchPage ? (
+         <SearchBook
+           closeSearchPage={this.toggleSearchPage}
+         />
         ) : (
          <ListBooks
            books={this.state.books}
            changeShelf={this.changeShelf}
-           showSearchPage={this.showSearchPage}
+           openSearchPage={this.toggleSearchPage}
          />
         )}
       </div>

@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
+import Book from './Book'
+import * as BooksAPI from './BooksAPI';
 
 class SearchBook extends Component {
   state = {
-    query: ""
+    query: "",
+    searchResult: []
   }
 
   updateQuery = (query) => {
     this.setState({query: query})
   }
 
+  getBooks = (q) => {
+    BooksAPI.search(q).then(books => this.setState({searchResult: books}))
+  }
+
   render() {
     return(
       <div className="search-books">
             <div className="search-books-bar">
-              <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
+              <a className="close-search" onClick={this.props.closeSearchPage}>Close</a>
               <div className="search-books-input-wrapper">
                 <input
                   type="text"
@@ -24,7 +31,17 @@ class SearchBook extends Component {
               </div>
             </div>
             <div className="search-books-results">
-              <ol className="books-grid"></ol>
+              <ol className="books-grid">
+                {
+                  this.state.searchResult.map(searchedBook => (
+                      <li key={searchedBook.id}>
+                        <Book
+                          book={searchedBook}
+                          />
+                      </li>
+                    ))
+                }
+              </ol>
             </div>
           </div>
     );
