@@ -34,6 +34,7 @@ class BooksApp extends React.Component {
         {this.state.SearchPage ? (
          <SearchBook
            closeSearchPage={this.toggleSearchPage}
+           changeShelf={this.changeShelf}
          />
         ) : (
          <ListBooks
