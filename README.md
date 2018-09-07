@@ -86,16 +86,16 @@ Feel free to
 - [ ] Updated README.
  - [ ] Describes the project.
  - [ ] Has instructions for installing and launching.
-- [ ] Create with create-react-app.
- - [ ] Requires only npm install and npm start.
+- [x] Create with create-react-app.
+ - [x] Requires only npm install and npm start.
 **Main Page**
-- [ ] Page shows 3 shelves for books.
-  - [ ] Book is shown on the correct shelf.
-    - [ ] With its title and author(s).
-- [ ] Page has control that allows users to move books between shelves.
-  - [ ] Control should be tied to each book instance.
-  - [ ] Moving a book to a different shelf works correctly.
-- [ ] When the browser is refreshed, the same information is displayed on the page.
+- [x] Page shows 3 shelves for books.
+  - [x] Book is shown on the correct shelf.
+    - [x] With its title and author(s).
+- [x] Page has control that allows users to move books between shelves.
+  - [x] Control should be tied to each book instance.
+  - [x] Moving a book to a different shelf works correctly.
+- [x] When the browser is refreshed, the same information is displayed on the page.
 **Search Page**
 - [x] Page has a search input field.
 - [x] Page behaves correctly.
@@ -117,12 +117,12 @@ Feel free to
 - [x] Main page contains link to search page.
   - [x] When link is clicked, search page is displayed  /search.
 - [x] Search page contains link to main page.
-  - [ ] When link is clicked, main page is displayed and browser’s URL is /.
+  - [x] When link is clicked, main page is displayed and browser’s URL is /.
 **Code Functionality**
-- [ ] Component state is passed down from parent components to child components.
-- [ ] Tate variable is not modified directly - setState() function is used correctly.
-- [ ] Books have same state on search page and main page.
-[ ] If book is on bookshelf, that is reflected in both locations.
-[ ] The code runs without errors.
-[ ] There are no warnings from not following best practices listed in documentation (*such as using key for list items*)
-[ ] All code is functional and formatted properly.
+- [x] Component state is passed down from parent components to child components.
+- [x] Tate variable is not modified directly - setState() function is used correctly.
+- [x] Books have same state on search page and main page.
+- [x] If book is on bookshelf, that is reflected in both locations.
+- [x] The code runs without errors.
+- [x] There are no warnings from not following best practices listed in documentation (*such as using key for list items*)
+- [x] All code is functional and formatted properly.
