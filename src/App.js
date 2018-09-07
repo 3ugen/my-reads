@@ -17,8 +17,8 @@ class BooksApp extends React.Component {
     BooksAPI.getAll().then(books => this.setState({books: books}))
   }
 
-  changeShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(() => this.setState())
+  changeShelf(book, shelf) {
+    BooksAPI.update(book, shelf).then((data) => console.log(data))
   }
 
   toggleSearchPage = () => {
@@ -29,7 +29,6 @@ class BooksApp extends React.Component {
 
 
   render() {
-    console.log(this.state);
     return (
       <div className="app">
         <Route exact path="/" render={ () => (
