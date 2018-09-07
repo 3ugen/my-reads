@@ -1,8 +1,11 @@
-# MyReads Project
+# _Project_: My-Reads
+#### _Udacity Front-End Web Developer Nanodegree_
+---
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+## Project Description
+A bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using **[React](https://reactjs.org/)** to build the application.
 
-## What You're Getting
+## Project Structure
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
@@ -23,18 +26,23 @@ This is the starter template for the final assessment project for Udacity's Reac
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
+## To run the app:
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+1. Clone repository and `cd` into directory.
+2. run: `npm install`
+3. run: `npm start`
 
-## Backend Server
+## Code dependencies
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+### Backend Server
+
+Udacity provided the backend server. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
 * [`getAll`](#getall)
 * [`update`](#update)
 * [`search`](#search)
 
-### `getAll`
+#### `getAll`
 
 Method Signature:
 
@@ -45,7 +53,7 @@ getAll()
 * Returns a Promise which resolves to a JSON object containing a collection of book objects.
 * This collection represents the books currently in the bookshelves in your app.
 
-### `update`
+#### `update`
 
 Method Signature:
 
@@ -57,7 +65,7 @@ update(book, shelf)
 * shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
 * Returns a Promise which resolves to a JSON object containing the response data of the POST request
 
-### `search`
+#### `search`
 
 Method Signature:
 
@@ -69,16 +77,13 @@ search(query)
 * Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
 * These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
-## Important
+### Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-## Create React App
+### Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Contributing
-
-Feel free to
 
 ## TODO
 
