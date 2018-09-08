@@ -10,7 +10,6 @@ import './App.css'
 class BooksApp extends React.Component {
   state = {
     books: [],
-    // SearchPage: false
   }
 
   componentDidMount() {
@@ -19,12 +18,6 @@ class BooksApp extends React.Component {
 
   changeShelf(book, shelf) {
     BooksAPI.update(book, shelf).then((data) => console.log(data))
-  }
-
-  toggleSearchPage = () => {
-    this.state.SearchPage ?
-    (this.setState({ SearchPage: false })) :
-    (this.setState({ SearchPage: true }))
   }
 
 
