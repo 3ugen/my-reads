@@ -5,6 +5,7 @@ import SearchBook from './SearchBooks';
 import ListBooks from './ListBooks';
 // API's
 import * as BooksAPI from './BooksAPI'
+// Styles
 import './App.css'
 
 class BooksApp extends React.Component {
@@ -16,8 +17,9 @@ class BooksApp extends React.Component {
     BooksAPI.getAll().then(books => this.setState({books: books}))
   }
 
-  changeShelf(book, shelf) {
-    BooksAPI.update(book, shelf).then((data) => console.log(data))
+  changeShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf);
+    BooksAPI.getAll().then(books => this.setState({books: books}))
   }
 
 
